@@ -1,0 +1,6 @@
+geodata_pb2.py
+geodata_pb2_grpc.py
+geonames_index/
+venv/
+
+__pycache__/
