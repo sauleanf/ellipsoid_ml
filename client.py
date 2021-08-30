@@ -2,8 +2,7 @@ from __future__ import print_function
 
 import grpc
 
-import geodata_pb2
-import geodata_pb2_grpc
+from core.grpc import geodata_pb2, geodata_pb2_grpc
 
 
 def run():

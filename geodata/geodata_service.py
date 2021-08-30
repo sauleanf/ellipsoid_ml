@@ -1,12 +1,19 @@
 import grpc
 from mordecai import Geoparser
 
-import geodata_pb2
-import geodata_pb2_grpc
+from core.grpc import geodata_pb2, geodata_pb2_grpc
 
 
 class GeoDataService(geodata_pb2_grpc.GeoDataServicer):
-    def GetData(self, request, context):
+    def GetData(self, request, context) -> geodata_pb2.GeoDataReply:
+        """
+        Gets the geographic information for the sentence in the grpc
+        request
+
+        :param request: a GRPC request
+        :param context: a GRPC context
+        :return: a GeoDataReply
+        """
         geo = Geoparser()
 
         res = geo.geoparse(request.sentence)
