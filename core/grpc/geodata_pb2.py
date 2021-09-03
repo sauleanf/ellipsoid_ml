@@ -15,11 +15,11 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='core/grpc/geodata.proto',
-  package='p2.common',
+  package='core.grpc',
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x17\x63ore/grpc/geodata.proto\x12\tp2.common\"\"\n\x0eGeoDataRequest\x12\x10\n\x08sentence\x18\x01 \x01(\t\"L\n\x0cGeoDataReply\x12\x0f\n\x07\x63ountry\x18\x01 \x01(\t\x12\x11\n\tplaceName\x18\x02 \x01(\t\x12\x0b\n\x03lat\x18\x03 \x01(\x01\x12\x0b\n\x03lng\x18\x04 \x01(\x01\x32J\n\x07GeoData\x12?\n\x07GetData\x12\x19.p2.common.GeoDataRequest\x1a\x17.p2.common.GeoDataReply\"\x00\x62\x06proto3'
+  serialized_pb=b'\n\x17\x63ore/grpc/geodata.proto\x12\tcore.grpc\"\"\n\x0eGeoDataRequest\x12\x10\n\x08sentence\x18\x01 \x01(\t\"L\n\x0cGeoDataReply\x12\x0f\n\x07\x63ountry\x18\x01 \x01(\t\x12\x11\n\tplaceName\x18\x02 \x01(\t\x12\x0b\n\x03lat\x18\x03 \x01(\x01\x12\x0b\n\x03lng\x18\x04 \x01(\x01\x32J\n\x07GeoData\x12?\n\x07GetData\x12\x19.core.grpc.GeoDataRequest\x1a\x17.core.grpc.GeoDataReply\"\x00\x62\x06proto3'
 )
 
 
@@ -27,14 +27,14 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _GEODATAREQUEST = _descriptor.Descriptor(
   name='GeoDataRequest',
-  full_name='p2.common.GeoDataRequest',
+  full_name='core.grpc.GeoDataRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='sentence', full_name='p2.common.GeoDataRequest.sentence', index=0,
+      name='sentence', full_name='core.grpc.GeoDataRequest.sentence', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -59,35 +59,35 @@ _GEODATAREQUEST = _descriptor.Descriptor(
 
 _GEODATAREPLY = _descriptor.Descriptor(
   name='GeoDataReply',
-  full_name='p2.common.GeoDataReply',
+  full_name='core.grpc.GeoDataReply',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='country', full_name='p2.common.GeoDataReply.country', index=0,
+      name='country', full_name='core.grpc.GeoDataReply.country', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='placeName', full_name='p2.common.GeoDataReply.placeName', index=1,
+      name='placeName', full_name='core.grpc.GeoDataReply.placeName', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='lat', full_name='p2.common.GeoDataReply.lat', index=2,
+      name='lat', full_name='core.grpc.GeoDataReply.lat', index=2,
       number=3, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='lng', full_name='p2.common.GeoDataReply.lng', index=3,
+      name='lng', full_name='core.grpc.GeoDataReply.lng', index=3,
       number=4, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -116,14 +116,14 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 GeoDataRequest = _reflection.GeneratedProtocolMessageType('GeoDataRequest', (_message.Message,), {
   'DESCRIPTOR' : _GEODATAREQUEST,
   '__module__' : 'core.grpc.geodata_pb2'
-  # @@protoc_insertion_point(class_scope:p2.common.GeoDataRequest)
+  # @@protoc_insertion_point(class_scope:core.grpc.GeoDataRequest)
   })
 _sym_db.RegisterMessage(GeoDataRequest)
 
 GeoDataReply = _reflection.GeneratedProtocolMessageType('GeoDataReply', (_message.Message,), {
   'DESCRIPTOR' : _GEODATAREPLY,
   '__module__' : 'core.grpc.geodata_pb2'
-  # @@protoc_insertion_point(class_scope:p2.common.GeoDataReply)
+  # @@protoc_insertion_point(class_scope:core.grpc.GeoDataReply)
   })
 _sym_db.RegisterMessage(GeoDataReply)
 
@@ -131,7 +131,7 @@ _sym_db.RegisterMessage(GeoDataReply)
 
 _GEODATA = _descriptor.ServiceDescriptor(
   name='GeoData',
-  full_name='p2.common.GeoData',
+  full_name='core.grpc.GeoData',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
@@ -141,7 +141,7 @@ _GEODATA = _descriptor.ServiceDescriptor(
   methods=[
   _descriptor.MethodDescriptor(
     name='GetData',
-    full_name='p2.common.GeoData.GetData',
+    full_name='core.grpc.GeoData.GetData',
     index=0,
     containing_service=None,
     input_type=_GEODATAREQUEST,

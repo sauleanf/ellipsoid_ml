@@ -15,7 +15,7 @@ class GeoDataStub(object):
             channel: A grpc.Channel.
         """
         self.GetData = channel.unary_unary(
-                '/p2.common.GeoData/GetData',
+                '/core.grpc.GeoData/GetData',
                 request_serializer=core_dot_grpc_dot_geodata__pb2.GeoDataRequest.SerializeToString,
                 response_deserializer=core_dot_grpc_dot_geodata__pb2.GeoDataReply.FromString,
                 )
@@ -40,7 +40,7 @@ def add_GeoDataServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'p2.common.GeoData', rpc_method_handlers)
+            'core.grpc.GeoData', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -59,7 +59,7 @@ class GeoData(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/p2.common.GeoData/GetData',
+        return grpc.experimental.unary_unary(request, target, '/core.grpc.GeoData/GetData',
             core_dot_grpc_dot_geodata__pb2.GeoDataRequest.SerializeToString,
             core_dot_grpc_dot_geodata__pb2.GeoDataReply.FromString,
             options, channel_credentials,
